@@ -1,0 +1,349 @@
+header {
+    position: relative;
+    height: 250px; /* Ajuste a altura para cobrir o `header` e o `h1`, mas não a barra de busca */
+    overflow: hidden;
+ 
+}
+
+.banner{
+
+    height: 100%; /* ocupa a altura total do header */
+    background-image: url('/images/foto2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(60, 29, 131, 0.8), rgba(60, 29, 131, 0) 20%, 
+        rgba(60, 29, 131, 0.8), rgba(60, 29, 131, 0)
+    );
+    border-radius: 20px;
+    pointer-events: none;
+}
+ 
+.banner-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Centraliza o conteúdo verticalmente */
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    color:#ffffff;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+   
+}
+
+footer {
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+}
+
+nav ul {
+    display: flex; /* Coloca os itens lado a lado */
+    justify-content: center;
+    list-style: none; /* Remove as bolinhas padrão da lista */
+    padding: 20px;
+    margin: 0;
+    z-index: 5;
+    background-color: #611dce;
+}
+
+nav ul li {
+    margin-right: 15px; /* Espaçamento entre os itens */
+    z-index: 4;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 20px;
+    transition: color 0.3s ease;
+    z-index: 5;
+}
+
+nav ul li a:hover {
+    color: #6237ff;
+    z-index: 6;
+}
+
+body {
+
+    background-color: #611dce;
+    font-family: 'Roboto', sans-serif;
+}
+
+.search-bar {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 1px;
+    z-index: 7;
+    padding-left: 100px;
+
+}
+
+.search-bar input[type="text"] {
+
+    width: 300px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif; /* A mesma fonte usada no site */
+    font-size: 16px;
+    color: #333;
+    border: 2px solid #5869ff; 
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input[type="text"]::placeholder {
+    color: #aaa; /* Cor do placeholder */
+    font-weight: 400;
+}
+
+.search-bar input[type="text"]:focus {
+    border-color: #871eff;
+}
+
+
+
+.user-login{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family:'Roboto', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    padding-right: 50px;
+}
+
+.user-login i {
+    font-size: 20px; /* Tamanho do ícone */
+    color: #ffffff; /* Cor do ícone */
+}
+
+.user-login a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.user-login a:hover {
+    color: #871eff; /* Cor do texto ao passar o mouse */
+}
+
+.search-bar-container {
+    display: flex;
+    justify-content: space-between; /* Espaça os elementos corretamente */
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto; /* Centraliza a barra de busca */
+    padding: 10px 0;
+}
+
+.search-bar {
+
+display:flex;
+flex-grow: 1;
+gap:0;
+
+}
+
+
+.search-bar input[type="text"] {
+    width: 100%; /* Ajusta para ocupar todo o espaço */
+    max-width: 300px; /* Limita o tamanho máximo */
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: 2px solid #5869ff;
+    outline: none;
+}
+
+
+
+.search-bar button {
+    padding: 10px 15px;
+    background-color: #ffffff;
+    color: #611dce;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #6237ff;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    
+    background-color: #5869ff;
+    border-color: #ffffff;
+}
+
+
+.product-navbar {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    padding: 20px 0;  /* Espaçamento superior e inferior */
+    background-color: #611dce; /* Cor de fundo da navbar */
+    margin-top: 10px;
+    border-radius: 5px;
+    height: 20px;
+    overflow:hidden;
+    z-index: 4;
+}
+
+.product-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre as categorias */
+ 
+}
+
+.product-navbar ul li {
+    font-size:20px; /* Aumenta o tamanho da fonte */
+    
+}
+
+.product-navbar ul li a {
+    color: rgb(255, 255, 255); /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    padding: 10px 10px; /* Aumenta o tamanho do link */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 10px; /* Borda arredondada nos links */
+  
+}
+
+.product-navbar ul li a:hover {
+    background-color: #5869ff; /* Cor de fundo ao passar o mouse */
+    color: #ffffff; /* Cor do texto ao passar o mouse */
+}
+
+.product-grid {
+    display: grid;
+    gap: 15px; /* Ajuste o espaçamento entre as colunas */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    max-width: 900px;
+    margin: 20px auto 0;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Ajuste o espaçamento entre os slots */  
+}
+
+.slot {
+    height: 100px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+       
+}
+
+.container {
+    display: flex;/* Centraliza o conteúdo da div container */
+    width: 100%;
+}
+
+/* Container do modal */
+.modal-container {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro translúcido */
+    backdrop-filter: blur(5px); /* Aplica o blur */
+    z-index: 999; /* Fica acima de todos os elementos */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal centralizado */
+.modal {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+/* Botão de fechar */
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Inputs do formulário */
+.modal form input {
+    display: block;
+    width: 94.5%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* Botão de enviar */
+.modal form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #611dce;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal form button:hover {
+    background-color: #871eff;
+}
+
+.modal form {
+    text-align: left; /* Garante que todos os elementos do formulário fiquem alinhados à esquerda */
+    padding-left: 20px; /* Opcional: ajuste o espaçamento à esquerda */
+}
+
+.modal form label {
+    display: block; /* Coloca os rótulos em linha separada */
+    margin-bottom: 5px; /* Adiciona espaço entre o rótulo e o campo */
+    font-size: 14px; /* Ajuste o tamanho da fonte, se necessário */
+    font-weight: bold; /* Deixe os rótulos mais visíveis */
+}
